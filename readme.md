@@ -21,7 +21,7 @@
 4. Создайте файл `.env` в корне проекта:
    ```env
    REPOSITORY_TYPE=memory   # или database
-   DB_URL=postgresql://user:password@localhost:5432/dbname # или для sqlite DB_URL=sqlite:///:memory:
+   DB_URL=postgresql+psycopg2://user:password@localhost:5432/dbname # или для sqlite DB_URL=sqlite:///:memory:
    ```
 
 ## Запуск
