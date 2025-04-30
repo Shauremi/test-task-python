@@ -4,7 +4,6 @@ import uvicorn
 from src.users import router as router_users
 from src.database import Base, engine
 
-
 app = FastAPI(title="Users API", description="---")
 app.include_router(router_users)
 

@@ -28,7 +28,7 @@ def read_user(user_id: int, repo: Repository = Depends(get_user_repository)):
 
 @router.delete("/{user_id}")
 def delete_user(user_id: int, repo: Repository = Depends(get_user_repository)):
-    success = repo.delete(user_id)
+    success = repo.delete(user_id) # 204
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "User deleted successfully"}
@@ -41,4 +41,4 @@ def partial_update_user(
     updated = repo.update(user_id, user)
     if not updated:
         raise HTTPException(status_code=404, detail="User not found")
-    return updated
+    return updated # 201
