@@ -12,7 +12,7 @@
 2. Создайте виртуальное окружение и активируйте его:
    ```cmd
    python -m venv venv
-   source venv\\Scripts\\activate
+   venv\\Scripts\\activate.bat
    ```
 3. Установите зависимости:
    ```cmd
